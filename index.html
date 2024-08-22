@@ -9,6 +9,7 @@
     <body>
         <p id="p1"></p>
         <p id="p2"></p>
+        <p id="result"></p>
         <script>
             var student= {name:"Kamsy",age:14,grade:10}
             var fruit={name:"orange",color:"yellow",vitamin:"vitamin C"}
@@ -24,6 +25,19 @@
 
             var num3=Math.atan(1)
             document.write("The tan is"+num3+"<br>")
+
+            function findMax(){
+                var i;
+                var max=0
+                for(i=0; i<arguments.length;i++)
+            {
+                if(arguments[i]>max){
+                    max=arguments[i];
+                }
+            }
+            return max
+            }
+            document.getElementById("result").innerHTML=findMax(4,5,6);
 
 
 
